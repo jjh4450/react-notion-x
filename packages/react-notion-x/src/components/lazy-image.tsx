@@ -7,40 +7,54 @@ import { useNotionContext } from '../context'
 import { cs } from '../utils'
 
 /**
- * Progressive, lazy images modeled after Medium's LQIP technique.
+ * Get optimized image URL based on the service.
+ * @param {string} src - Original image source URL.
+ * @param {number} width - Desired image width for optimization.
+ * @returns {string} - Optimized image URL.
  */
-export const LazyImage: React.FC<{
-  src?: string
-  alt?: string
-  className?: string
-  style?: React.CSSProperties
-  height?: number
-  zoomable?: boolean
-  priority?: boolean
-}> = ({
+const getOptimizedImageUrl = (src, width) => {
+  if (src.includes('notion.so')) {
+    const url = new URL(src)
+    url.searchParams.set('width', width.toString())
+    url.searchParams.set('fm', 'webp')
+    return url.toString()
+  } else if (src.includes('unsplash.com')) {
+    const url = new URL(src)
+    url.searchParams.set('width', width.toString())
+    url.searchParams.set('fm', 'webp')
+    return url.toString()
+  }
+  return src
+}
+
+/**
+ * Progressive, lazy-loaded images modeled after Medium's LQIP technique.
+ */
+export const LazyImage = ({
   src,
   alt,
   className,
   style,
+  height,
   zoomable = false,
   priority = false,
-  height,
   ...rest
 }) => {
   const { recordMap, zoom, previewImages, forceCustomImages, components } =
     useNotionContext()
 
   const zoomRef = React.useRef(zoom ? zoom.clone() : null)
+
   const previewImage = previewImages
     ? recordMap?.preview_images?.[src] ??
       recordMap?.preview_images?.[normalizeUrl(src)]
     : null
 
   const onLoad = React.useCallback(
-    (e: any) => {
+    (e) => {
       if (zoomable && (e.target.src || e.target.srcset)) {
         if (zoomRef.current) {
-          ;(zoomRef.current as any).attach(e.target)
+          zoomRef.current.attach(e.target)
         }
       }
     },
@@ -48,9 +62,9 @@ export const LazyImage: React.FC<{
   )
 
   const attachZoom = React.useCallback(
-    (image: any) => {
+    (image) => {
       if (zoomRef.current && image) {
-        ;(zoomRef.current as any).attach(image)
+        zoomRef.current.attach(image)
       }
     },
     [zoomRef]
@@ -61,15 +75,32 @@ export const LazyImage: React.FC<{
     [zoomable, attachZoom]
   )
 
+  const srcSet = `
+    ${getOptimizedImageUrl(src, 300)} 300w,
+    ${getOptimizedImageUrl(src, 600)} 600w,
+    ${getOptimizedImageUrl(src, 900)} 900w,
+    ${getOptimizedImageUrl(src, 1200)} 1200w,
+    ${getOptimizedImageUrl(src, 1600)} 1600w,
+    ${getOptimizedImageUrl(src, 2400)} 2400w,
+    ${getOptimizedImageUrl(src, 3200)} 3200w
+  `
+
+  const sizes = `
+    (max-width: 300px) 100vw,
+    (max-width: 600px) 100vw,
+    (max-width: 900px) 100vw,
+    (max-width: 1200px) 75vw,
+    (max-width: 1600px) 60vw,
+    100vw
+  `
+
   if (previewImage) {
     const aspectRatio = previewImage.originalHeight / previewImage.originalWidth
 
     if (components.Image) {
-      // TODO: could try using next/image onLoadComplete to replace LazyImageFull
-      // while retaining our blur implementation
       return (
         <components.Image
-          src={src}
+          src={getOptimizedImageUrl(src, 300)}
           alt={alt}
           style={style}
           className={className}
@@ -79,6 +110,8 @@ export const LazyImage: React.FC<{
           placeholder='blur'
           priority={priority}
           onLoad={onLoad}
+          srcSet={srcSet}
+          sizes={sizes} // sizes 적용
         />
       )
     }
@@ -116,20 +149,16 @@ export const LazyImage: React.FC<{
                 style={style}
                 decoding='async'
               />
-
               <img
                 className='lazy-image-real'
                 src={src}
                 alt={alt}
                 ref={attachZoomRef}
-                style={{
-                  ...style,
-                  ...imgStyle
-                }}
-                width={previewImage.originalWidth}
-                height={previewImage.originalHeight}
+                style={{ ...style, ...imgStyle }}
                 decoding='async'
                 loading='lazy'
+                srcSet={srcSet}
+                sizes={sizes} // sizes 적용
               />
             </div>
           )
@@ -162,6 +191,8 @@ export const LazyImage: React.FC<{
           height={height || null}
           priority={priority}
           onLoad={onLoad}
+          srcSet={srcSet}
+          sizes={sizes} // sizes 적용
         />
       )
     }
@@ -176,6 +207,8 @@ export const LazyImage: React.FC<{
         ref={attachZoomRef}
         loading='lazy'
         decoding='async'
+        srcSet={srcSet}
+        sizes={sizes} // sizes 적용
         {...rest}
       />
     )
