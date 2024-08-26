@@ -30,14 +30,22 @@ const getOptimizedImageUrl = (src, width) => {
 /**
  * Progressive, lazy-loaded images modeled after Medium's LQIP technique.
  */
-export const LazyImage = ({
+export const LazyImage: React.FC<{
+  src?: string
+  alt?: string
+  className?: string
+  style?: React.CSSProperties
+  height?: number
+  zoomable?: boolean
+  priority?: boolean
+}> = ({
   src,
   alt,
   className,
   style,
-  height,
   zoomable = false,
   priority = false,
+  height,
   ...rest
 }) => {
   const { recordMap, zoom, previewImages, forceCustomImages, components } =
