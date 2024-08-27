@@ -1,4 +1,4 @@
-import * as types from 'notion-types'
+import * as types from 'custom-notlon-renderer-types'
 
 /**
  * Gets the raw, unformatted text content of a block's content value.

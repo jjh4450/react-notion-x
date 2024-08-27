@@ -1,6 +1,6 @@
-import * as notion from 'notion-types'
+import * as notion from 'custom-notlon-renderer-types'
 import type { Client } from '@notionhq/client'
-import { parsePageId } from 'notion-utils'
+import { parsePageId } from 'custom-notlon-renderer-utils'
 import PQueue from 'p-queue'
 
 import * as types from './types'

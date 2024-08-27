@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { CollectionPropertySchema } from 'notion-types'
+import { CollectionPropertySchema } from 'custom-notlon-renderer-types'
 
 import { PropertyIcon } from '../icons/property-icon'
 

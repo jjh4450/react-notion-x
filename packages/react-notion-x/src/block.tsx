@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import * as types from 'notion-types'
+import * as types from 'custom-notlon-renderer-types'
 import {
   getBlockCollectionId,
   getBlockIcon,
@@ -8,7 +8,7 @@ import {
   getPageTableOfContents,
   getTextContent,
   uuidToId
-} from 'notion-utils'
+} from 'custom-notlon-renderer-utils'
 
 import { AssetWrapper } from './components/asset-wrapper'
 import { Audio } from './components/audio'

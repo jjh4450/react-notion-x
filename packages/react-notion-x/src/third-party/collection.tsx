@@ -1,11 +1,11 @@
 import * as React from 'react'
 
-import * as types from 'notion-types'
+import * as types from 'custom-notlon-renderer-types'
 import {
   getBlockCollectionId,
   getBlockParentPage,
   getTextContent
-} from 'notion-utils'
+} from 'custom-notlon-renderer-utils'
 import { useLocalStorage, useWindowSize } from 'react-use'
 
 import { PageIcon } from '../components/page-icon'

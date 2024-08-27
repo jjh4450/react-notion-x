@@ -1,4 +1,4 @@
-import { NotionAPI } from 'notion-client'
+import { NotionAPI } from 'custom-notlon-renderer-client'
 
 const notion = new NotionAPI()
 export default notion

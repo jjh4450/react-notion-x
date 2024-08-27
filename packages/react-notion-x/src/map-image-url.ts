@@ -1,4 +1,4 @@
-import { Block } from 'notion-types'
+import { Block } from 'custom-notlon-renderer-types'
 
 export const defaultMapImageUrl = (
   url: string,

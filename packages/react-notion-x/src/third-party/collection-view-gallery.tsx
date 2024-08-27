@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { PageBlock } from 'notion-types'
+import { PageBlock } from 'custom-notlon-renderer-types'
 
 import { useNotionContext } from '../context'
 import { CollectionViewProps } from '../types'

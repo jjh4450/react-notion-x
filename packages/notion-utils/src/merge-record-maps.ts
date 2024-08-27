@@ -1,4 +1,4 @@
-import { ExtendedRecordMap } from 'notion-types'
+import { ExtendedRecordMap } from 'custom-notlon-renderer-types'
 
 export function mergeRecordMaps(
   recordMapA: ExtendedRecordMap,

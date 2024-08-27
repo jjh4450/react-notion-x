@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import * as types from 'notion-types'
+import * as types from 'custom-notlon-renderer-types'
 
 export type MapPageUrlFn = (
   pageId: string,

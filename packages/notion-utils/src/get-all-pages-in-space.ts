@@ -1,4 +1,4 @@
-import { ExtendedRecordMap, PageMap } from 'notion-types'
+import { ExtendedRecordMap, PageMap } from 'custom-notlon-renderer-types'
 import PQueue from 'p-queue'
 
 import { parsePageId } from './parse-page-id'

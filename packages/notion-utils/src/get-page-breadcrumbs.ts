@@ -1,4 +1,4 @@
-import * as types from 'notion-types'
+import * as types from 'custom-notlon-renderer-types'
 
 import { getBlockIcon } from './get-block-icon'
 import { getBlockParentPage } from './get-block-parent-page'

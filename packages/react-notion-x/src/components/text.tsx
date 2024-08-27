@@ -1,7 +1,11 @@
 import * as React from 'react'
 
-import { Block, Decoration, ExternalObjectInstance } from 'notion-types'
-import { parsePageId } from 'notion-utils'
+import {
+  Block,
+  Decoration,
+  ExternalObjectInstance
+} from 'custom-notlon-renderer-types'
+import { parsePageId } from 'custom-notlon-renderer-utils'
 
 import { useNotionContext } from '../context'
 import { formatDate, getHashFragmentValue } from '../utils'

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { FileBlock } from 'notion-types'
+import { FileBlock } from 'custom-notlon-renderer-types'
 
 import { useNotionContext } from '../context'
 import { FileIcon } from '../icons/file-icon'

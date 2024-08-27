@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { GoogleDriveBlock } from 'notion-types'
+import { GoogleDriveBlock } from 'custom-notlon-renderer-types'
 
 import { useNotionContext } from '../context'
 import { cs } from '../utils'

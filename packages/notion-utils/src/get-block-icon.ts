@@ -1,4 +1,8 @@
-import { Block, ExtendedRecordMap, PageBlock } from 'notion-types'
+import {
+  Block,
+  ExtendedRecordMap,
+  PageBlock
+} from 'custom-notlon-renderer-types'
 
 import { getBlockCollectionId } from './get-block-collection-id'
 

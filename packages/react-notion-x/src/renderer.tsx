@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import mediumZoom from '@fisch0920/medium-zoom'
-import { ExtendedRecordMap } from 'notion-types'
+import { ExtendedRecordMap } from 'custom-notlon-renderer-types'
 
 import { Block } from './block'
 import { NotionContextProvider, useNotionContext } from './context'

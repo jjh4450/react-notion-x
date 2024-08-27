@@ -1,4 +1,4 @@
-import { ExtendedRecordMap } from 'notion-types'
+import { ExtendedRecordMap } from 'custom-notlon-renderer-types'
 
 import { getBlockTitle } from './get-block-title'
 import { getPageProperty } from './get-page-property'

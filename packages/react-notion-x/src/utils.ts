@@ -1,6 +1,10 @@
-import { BlockMap } from 'notion-types'
+import { BlockMap } from 'custom-notlon-renderer-types'
 
-export { isUrl, formatDate, formatNotionDateTime } from 'notion-utils'
+export {
+  isUrl,
+  formatDate,
+  formatNotionDateTime
+} from 'custom-notlon-renderer-utils'
 export * from './map-image-url'
 export * from './map-page-url'
 

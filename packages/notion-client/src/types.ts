@@ -1,4 +1,4 @@
-import * as notion from 'notion-types'
+import * as notion from 'custom-notlon-renderer-types'
 
 export interface SignedUrlRequest {
   permissionRecord: PermissionRecord

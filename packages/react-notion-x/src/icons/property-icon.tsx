@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { PropertyType } from 'notion-types'
+import { PropertyType } from 'custom-notlon-renderer-types'
 
 import CheckboxIcon from './type-checkbox'
 import DateIcon from './type-date'

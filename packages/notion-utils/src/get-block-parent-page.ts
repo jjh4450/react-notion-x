@@ -1,4 +1,4 @@
-import * as types from 'notion-types'
+import * as types from 'custom-notlon-renderer-types'
 
 /**
  * Returns the parent page block containing a given page.

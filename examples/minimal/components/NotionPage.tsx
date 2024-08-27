@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Head from 'next/head'
 
-import { ExtendedRecordMap } from 'notion-types'
-import { getPageTitle } from 'notion-utils'
-import { NotionRenderer } from 'react-notion-x'
+import { NotionRenderer } from 'custom-notlon-renderer'
+import { ExtendedRecordMap } from 'custom-notlon-renderer-types'
+import { getPageTitle } from 'custom-notlon-renderer-utils'
 
 export const NotionPage = ({
   recordMap,

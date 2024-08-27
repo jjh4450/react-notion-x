@@ -1,6 +1,6 @@
 {
-  "name": "notion-x-example-minimal",
-  "version": "6.16.1",
+  "name": "custom-notlon-renderer-example-minimal",
+  "version": "0.1.0",
   "private": true,
   "type": "commonjs",
   "scripts": {
@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "next": "^12.1.0",
-    "notion-client": "^6.16.1",
-    "notion-utils": "^6.16.1",
+    "custom-notlon-renderer-client": "0.1.0",
+    "custom-notlon-renderer-utils": "0.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-notion-x": "^6.16.1"
+    "custom-notlon-renderer": "0.1.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.2",

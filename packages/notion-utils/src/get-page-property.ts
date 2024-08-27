@@ -1,4 +1,8 @@
-import { Block, DateFormat, ExtendedRecordMap } from 'notion-types'
+import {
+  Block,
+  DateFormat,
+  ExtendedRecordMap
+} from 'custom-notlon-renderer-types'
 
 import { getTextContent } from './get-text-content'
 

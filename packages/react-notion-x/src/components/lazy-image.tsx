@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { normalizeUrl } from 'notion-utils'
+import { normalizeUrl } from 'custom-notlon-renderer-utils'
 import { ImageState, LazyImageFull } from 'react-lazy-images'
 
 import { useNotionContext } from '../context'

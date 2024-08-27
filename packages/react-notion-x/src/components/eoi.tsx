@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Block } from 'notion-types'
+import { Block } from 'custom-notlon-renderer-types'
 
 import { useNotionContext } from '../context'
 import SvgTypeGitHub from '../icons/type-github'

@@ -1,12 +1,12 @@
 // import { promises as fs } from 'fs'
-import * as notion from 'notion-types'
-import got, { OptionsOfJSONResponseBody } from 'got'
+import * as notion from 'custom-notlon-renderer-types'
 import {
   getBlockCollectionId,
   getPageContentBlockIds,
   parsePageId,
   uuidToId
-} from 'notion-utils'
+} from 'custom-notlon-renderer-utils'
+import got, { OptionsOfJSONResponseBody } from 'got'
 import pMap from 'p-map'
 
 import * as types from './types'
