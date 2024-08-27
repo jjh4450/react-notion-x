@@ -1,6 +1,6 @@
 {
   "name": "custom-notlon-renderer-example-minimal",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "type": "commonjs",
   "scripts": {
@@ -10,12 +10,12 @@
     "deploy": "vercel deploy"
   },
   "dependencies": {
+    "custom-notlon-renderer": "^0.1.2",
+    "custom-notlon-renderer-client": "^0.1.2",
+    "custom-notlon-renderer-utils": "^0.1.2",
     "next": "^12.1.0",
-    "custom-notlon-renderer-client": "0.1.0",
-    "custom-notlon-renderer-utils": "0.1.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "custom-notlon-renderer": "0.1.0"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/node": "^16.11.2",

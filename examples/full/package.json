@@ -1,6 +1,6 @@
 {
   "name": "custom-notlon-renderer-full",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "type": "commonjs",
   "scripts": {
@@ -15,17 +15,17 @@
   "dependencies": {
     "@notionhq/client": "^1.0.4",
     "classnames": "^2.3.1",
+    "custom-notlon-renderer": "^0.1.2",
+    "custom-notlon-renderer-client": "^0.1.2",
+    "custom-notlon-renderer-compat": "^0.1.2",
+    "custom-notlon-renderer-utils": "^0.1.2",
     "got": "^12.0.2",
     "lqip-modern": "^1.2.0",
     "next": "^12.1.0",
-    "custom-notlon-renderer-client": "^0.1.0",
-    "custom-notlon-renderer-compat": "^0.1.0",
-    "custom-notlon-renderer-utils": "^0.1.0",
     "p-map": "^5.3.0",
     "p-memoize": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "custom-notlon-renderer": "^0.1.0",
     "react-tweet-embed": "^2.0.0"
   },
   "devDependencies": {

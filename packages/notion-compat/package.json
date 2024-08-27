@@ -1,6 +1,6 @@
 {
   "name": "custom-notlon-renderer-compat",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "type": "module",
   "description": "Compatibility layer between the official Notion API and unofficial private API.",
   "repository": "jjh4450/custom-notlon-renderer",
@@ -22,13 +22,13 @@
     "test": "ava"
   },
   "dependencies": {
-    "custom-notlon-renderer-types": "^0.1.0",
-    "custom-notlon-renderer-utils": "^0.1.0",
+    "custom-notlon-renderer-types": "^0.1.2",
+    "custom-notlon-renderer-utils": "^0.1.2",
     "p-queue": "^7.2.0"
   },
   "devDependencies": {
     "@notionhq/client": "^1.0.4",
-    "custom-notlon-renderer-client": "^0.1.0"
+    "custom-notlon-renderer-client": "^0.1.2"
   },
   "peerDependencies": {
     "@notionhq/client": "^1.0.4"

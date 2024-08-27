@@ -4,7 +4,7 @@
   "repository": "jjh4450/custom-notlon-renderer",
   "type": "module",
   "author": "JJH4450 <jjh4450git@gmail.com>, based on work by Travis Fischer <travis@transitivebullsh.it>",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "MIT",
   "types": "./build/index.d.ts",
   "sideEffects": false,

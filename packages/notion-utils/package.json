@@ -4,7 +4,7 @@
   "repository": "jjh4450/custom-notlon-renderer",
   "type": "module",
   "author": "JJH4450 <jjh4450git@gmail.com>, based on work by Travis Fischer <travis@transitivebullsh.it>",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "./build/index.js",
   "module": "./build/index.js",
@@ -28,10 +28,10 @@
     "test": "ava"
   },
   "dependencies": {
+    "custom-notlon-renderer-types": "^0.1.2",
     "is-url-superb": "^6.1.0",
     "mem": "^9.0.2",
     "normalize-url": "^7.0.3",
-    "custom-notlon-renderer-types": "^0.1.0",
     "p-queue": "^7.2.0"
   },
   "ava": {
